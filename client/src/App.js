@@ -1,6 +1,7 @@
 import { Container} from '@material-ui/core';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import React from 'react';
+import Navbar from './Components/Navbar/Navbar';
 import Auth from './Components/Auth/Auth';
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
     
     <BrowserRouter>
       <Container maxWidth="xl">
+      <Navbar />
         <Switch>
           <Route exact path="/auth" component={() => (!user ? <Auth /> : <Redirect to="/" />)}></Route>
         </Switch>
