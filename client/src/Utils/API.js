@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API = axios.create({ baseURL: 'https://mern-authentication-jwt.herokuapp.com' });
+const API = axios.create({ baseURL: 'http://localhost:3000' });
 /* https://mern-authentication-jwt.herokuapp.com */
 /* http://localhost:3000 */
 API.interceptors.request.use((req) => {
